@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growflix - Home</title>
+  <link href="libs/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="bg-dark text-light">
+
+  <nav class="navbar navbar-expand-lg position-sticky top-0 z-3">
+  <div class="container-fluid">
+ 
+    <ul class="navbar-nav d-flex flex-row ms-3">
+        <li class="nav-item"> <a class="navbar-brand" href="home.html">GROWFLIX</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+      <li class="nav-item"><a class="nav-link" href="#growcast">Growcasts</a></li>
+      <li class="nav-item"><a class="nav-link" href="#webinar">Webinars</a></li>
+      <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+  <div class="hero-banner">
+    <div class="hero-content">
+      <p class="category-label">PODCAST</p>
+      <h1>CRESCIMENTO</h1>
+      <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#playerModal" data-video-id="3JZ_D3ELwOQ">
+        Assista
+      </button>
+    </div>
+  </div>
+
+  <main class="sections-container" id="videos">
+
+    <section id="growcast" class="mb-5">
+      <h2 class="section-title text-white">Growcast [Episódios]</h2>
+      <div class="position-relative">
+        <button class="btn btn-scroll position-absolute start-0" data-target="growcast-row" data-dir="-1">&lt;</button>
+        <div id="growcast-row" class="video-row"></div>
+        <button class="btn btn-scroll position-absolute end-0" data-target="growcast-row" data-dir="1">&gt;</button>
+      </div>
+    </section>
+
+    <section id="webinar" class="mb-5">
+      <h2 class="section-title text-white">Webinar</h2>
+      <div class="position-relative">
+        <button class="btn btn-scroll position-absolute start-0" data-target="webinar-row" data-dir="-1">&lt;</button>
+        <div id="webinar-row" class="video-row"></div>
+        <button class="btn btn-scroll position-absolute end-0" data-target="webinar-row" data-dir="1">&gt;</button>
+      </div>
+    </section>
+
+    <section id="jornada" class="mb-5">
+      <h2 class="section-title text-white">Jornada UX/UI</h2>
+      <div class="position-relative">
+        <button class="btn btn-scroll position-absolute start-0" data-target="jornada-row" data-dir="-1">&lt;</button>
+        <div id="jornada-row" class="video-row"></div>
+        <button class="btn btn-scroll position-absolute end-0" data-target="jornada-row" data-dir="1">&gt;</button>
+      </div>
+    </section>
+
+    <section id="cursos" class="mb-5">
+      <h2 class="section-title text-white">Diversos</h2>
+      <div class="position-relative">
+        <button class="btn btn-scroll position-absolute start-0" data-target="diversos-row" data-dir="-1">&lt;</button>
+        <div id="diversos-row" class="video-row"></div>
+        <button class="btn btn-scroll position-absolute end-0" data-target="diversos-row" data-dir="1">&gt;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-black text-secondary py-5 custom-footer">
+  <div class="container">
+    <!-- Dúvidas -->
+    <p class="mb-4 text-white fw-bold">Dúvidas? Ligue 0800 591 8942</p>
+
+    <!-- Colunas -->
+    <div class="footer-columns d-flex justify-content-between flex-wrap">
+      <ul class="list-unstyled">
+        <li><a href="#">Perguntas</a></li>
+        <li><a href="#">Relações com investidores</a></li>
+        <li><a href="#">Formas de assistir</a></li>
+        <li><a href="#">Informações corporativas</a></li>
+        <li><a href="#">Só na Growflix</a></li>
+      </ul>
+      <ul class="list-unstyled">
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Carreiras</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Entre em contato</a></li>
+      </ul>
+      <ul class="list-unstyled">
+        <li><a href="#">Conta</a></li>
+        <li><a href="#">Resgatar cartão pré-pago</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Teste de velocidade</a></li>
+      </ul>
+      <ul class="list-unstyled">
+        <li><a href="#">Centro de mídia</a></li>
+        <li><a href="#">Comprar cartão pré-pago</a></li>
+        <li><a href="#">Preferências de cookies</a></li>
+        <li><a href="#">Avisos legais</a></li>
+      </ul>
+    </div>
+
+    <p class="mt-4 text-white">Growflix Growdev</p>
+  </div>
+</footer>
+
+
+ 
+  <script src="libs/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/home.js"></script>
+
+  <!-- Modal do Player -->
+  <div class="modal fade" id="playerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <!-- Botão fechar -->
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                  data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Vídeo -->
+          <div class="ratio ratio-16x9">
+            <iframe id="playerIframe" src="" title="Player"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
